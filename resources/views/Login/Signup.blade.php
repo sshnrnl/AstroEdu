@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="SignUp.css">
+    <link rel="stylesheet" href="{{ asset('Login/SignIn.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <div class="row">
                 <!-- buat yg gambarnya -->
               <div class="col-5"> 
-                <img src="Van Gogh.jpg">
+                <img src="{{ asset('Login/Home3.jpg') }}">
               </div>
 
                 <!-- buat contentnya -->
@@ -45,9 +45,9 @@
                 <p>Or Sign up With</p>
                 <div class="container_logo">
                     <div class="row row-cols-3">
-                      <div class="col"><img src="Instagram Logo.png"></div>
-                      <div class="col"><img src="Google Logo.png"></div>
-                      <div class="col"><img src="Facebook logo.png"></div>
+                      <div class="col"><img src="{{ asset('Login/Instagram Logo.png') }}"></div>
+                      <div class="col"><img src="{{ asset('Login/Google Logo.png') }}"></div>
+                      <div class="col"><img src="{{ asset('Login/Facebook logo.png') }}"></div>
                     </div>
                 </div>
 
