@@ -1,0 +1,65 @@
+ /* Sign In */
+ /* Ensure the body takes up the full viewport height and width */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Set the background image for the body */
+body {
+    background-image: url('Starry Night.jpg');
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: Change text color to be visible on the background */
+}
+
+/* Style the content */
+.content {
+    background-color: #D9D9D9; /* Optional: Add semi-transparent background to content for readability */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mb-3{
+    text-align: left;
+}
+
+/* Optional: Additional styling for the elements */
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    max-width: 100%; /* Memastikan gambar tidak lebih lebar dari kontainer */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    border: 2px solid #ccc; /* Menambahkan border */
+    border-radius: 10px; /* Membuat sudut membulat */
+    display: block;
+    margin: auto; /* Memastikan gambar berada di tengah kolom */
+}
+
+.container_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.col img {
+    max-width: 40px; /* Ukuran maksimal gambar */
+    height: auto; /* Menjaga rasio gambar */
+    display: block;
+}
