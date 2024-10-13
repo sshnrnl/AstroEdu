@@ -1,0 +1,12 @@
+* {
+    font-family: "Poppins", sans-serif !important;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+.navbar{
+    background-color: #152244;
+    box-sizing: border-box;
+}
