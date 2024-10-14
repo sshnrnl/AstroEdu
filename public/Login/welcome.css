@@ -7,6 +7,13 @@
   }
 
 .navbar{
-    background-color: #152244;
+    background-color: #7e91c0;
     box-sizing: border-box;
+}
+
+.nav-item{
+  font-size: larger;
+  margin-right: 80px;
+  padding-bottom: 10px;
+  color: white;
 }
