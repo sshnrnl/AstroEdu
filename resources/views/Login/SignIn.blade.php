@@ -21,14 +21,8 @@
               <div class="col-7">
                 <h2>Login</h2>
                 <p>
-                    Don't have account? <a href="SignUp.html">Sign Up</a>
+                    Don't have account? <a href="{{ url('/signup') }}">Sign Up</a>
                 </p>
-                
-
-                <div class="mb-3">
-                    <label for="Name" class="form-label">Name</label>
-                    <input class="form-control" type="text" placeholder="Name" aria-label="default input">
-                </div>
 
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
@@ -40,7 +34,7 @@
                     <input class="form-control" type="password" placeholder="Password" aria-label="default input example">
                 </div>
 
-                <button type="button" class="btn btn-primary">Sign In</button><br><br>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Sign In</button><br><br>
 
                 <p>Or Sign in With</p>
                 <div class="container_logo">

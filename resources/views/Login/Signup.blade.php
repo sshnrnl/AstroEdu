@@ -21,7 +21,7 @@
               <div class="col-7">
                 <h2>Get Sarted</h2>
                 <p>
-                    Already have account? <a href="SignIn.html">Sign In</a>
+                    Already have account? <a href="{{ url('/signin') }}">Sign In</a>
                 </p>
                 
 
@@ -40,7 +40,7 @@
                     <input class="form-control" type="password" placeholder="Password" aria-label="default input example">
                 </div>
 
-                <button type="button" class="btn btn-primary">Sign Up</button><br><br>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Sign Up</button><br><br>
 
                 <p>Or Sign up With</p>
                 <div class="container_logo">
