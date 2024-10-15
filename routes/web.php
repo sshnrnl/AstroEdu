@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/homw', function () {
     return view('welcome');
 });
 
@@ -24,4 +24,8 @@ Route::get('/signup', function () {
 
 Route::get('/signin', function () {
     return view('Login.SignIn');
+});
+
+Route::get('/', function () {
+    return view('AboutUs.AboutUs');
 });

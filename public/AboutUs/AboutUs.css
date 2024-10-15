@@ -1,0 +1,55 @@
+
+
+* {
+    font-family: "Poppins", sans-serif !important;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+.navbar{
+    background-color: #7e91c0;
+    box-sizing: border-box;
+}
+
+.nav-item{
+  font-size: larger;
+  margin-right: 80px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 125px;
+    display: flex;
+    background-image: url('Home2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.TextAboutUs {
+    color: wheat;
+}
+
+.TextAboutUs p {
+    width: 300px;
+    line-height: 20px;
+    word-spacing: 1px;
+}
+
+.Vid {
+    width: 100%; /* Make sure the video container takes up 100% of the column */
+    padding-left: 20px;
+}
+
+.Vid video {
+    width: 100%; /* Make video responsive to its container */
+    max-width: 100%; /* Prevents video from exceeding container width */
+    height: auto; /* Adjusts height automatically to preserve aspect ratio */
+    cursor: pointer;
+    border-radius: 30px;
+    overflow: hidden;
+}
