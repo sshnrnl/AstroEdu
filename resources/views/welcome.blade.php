@@ -18,11 +18,11 @@
           <img
             src="{{ asset('Login/Astronot.png') }}"
             alt="Bootstrap"
-            width="70"
-            height="70"
+            width="50"
+            height="50"
           />
         </a>
-        <span class="fs-3 fw-semibold">AstroEdu</span>
+        <span class="fs-3 fw-bold">AstroEdu</span>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,19 +40,39 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="welcome.blade.php"
+              <a class="nav-link" type="button" aria-current="page" href="welcome.blade.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Project</a>
+              <a class="nav-link" type="button" href="#">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Students</a>
+              <a class="nav-link" type="button" href="#">Students</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">Profile</a>
+              <a class="nav-link" type="button" href="#">Profile</a>
             </li>
+            <li class="nav-item">
+            <button
+              type="button"
+              class="loginbutton"
+              data-bs-toggle="#"
+              data-bs-target="#"
+            >
+              SignIn
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              type="button"
+              class="loginbutton"
+              data-bs-toggle="#"
+              data-bs-target="#"
+            >
+              SignUp
+            </button>
+          </li>
           </ul>
         </div>
       </div>
