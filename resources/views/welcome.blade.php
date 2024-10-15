@@ -57,8 +57,8 @@
             <button
               type="button"
               class="loginbutton"
-              data-bs-toggle="#"
-              data-bs-target="#"
+              data-bs-toggle="modal"
+              data-bs-target="#examplemodal"
             >
               SignIn
             </button>
@@ -67,8 +67,8 @@
             <button
               type="button"
               class="loginbutton"
-              data-bs-toggle="#"
-              data-bs-target="#"
+              data-bs-toggle="modal"
+              data-bs-target="#examplemodal"
             >
               SignUp
             </button>
