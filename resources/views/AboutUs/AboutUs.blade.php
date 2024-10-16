@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--Navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -57,7 +57,8 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    @include('Header_Footer.header')
 <!-- Navbar End -->
 
   <!-- Main Start -->
@@ -126,5 +127,9 @@
         </div>
      </div>
     <!-- Card End -->
+     
+    <!-- Footer Start -->
+     @include('Header_Footer.footer')
+    <!-- Footer End -->
 </body>
 </html>

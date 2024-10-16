@@ -229,3 +229,13 @@ img{
         padding-inline: 2.5rem;
     }
 }
+
+.footer_logo{
+    width: 200px;
+    height: 200px;
+    align-items: start;
+}
+
+.footer_text{
+    font-size: x-large;
+}
