@@ -71,6 +71,7 @@ img{
 .card_container{
     display: grid;
     row-gap: 3.5rem;
+    gap: 150px;
 }
 
 .card_article{
@@ -80,7 +81,14 @@ img{
 
 .card_img{
    width: 328px;
-   border-radius: 1.5rem;
+   border-radius: 3rem;
+   border: #cdb0de;
+   border-radius: 3rem;
+   /* border-bottom-style: groove;
+   border-top-style: groove;
+   border-width: 10px; */
+   border-style: dashed;
+   border-width: 4px;
 }
 
 .card_data{
@@ -213,7 +221,7 @@ img{
 
     .card_img{
         width: 348px;
-        max-height: 500px;
+        height: 100%;
     }
 
     .card_data{
