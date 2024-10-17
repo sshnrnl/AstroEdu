@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,20 @@ Route::get('/', function () {
 
 Route::get('/learn', function () {
     return view('Learning.Learning');
+});
+
+Route::get('auth/google', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('auth/google/callback', function () {
+    $user = Socialite::driver('google')->user();
+});
+
+Route::get('auth/facebook', function () {
+    return Socialite::driver('facebook')->redirect();
+});
+
+Route::get('auth/facebook/callback', function () {
+    $user = Socialite::driver('facebook')->user();
 });

@@ -36,24 +36,22 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="welcome.blade.php"
-                >Home</a
-              >
+              <a class="nav-link text-decoration-none text-dark" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/learn') }}">Learning</a>
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/learn') }}">Learning</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Community</a>
+              <a class="nav-link text-decoration-none text-dark" href="#">Community</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/') }}">About Us</a>
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/') }}">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/signin') }}">Sign In</a>
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/signin') }}">Sign In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link text-decoration-none text-dark" href="#">Profile</a>
             </li>
           </ul>
         </div>

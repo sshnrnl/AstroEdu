@@ -26,7 +26,7 @@
                             questions accompanied by captivating features and appealing designs. Our goal is to change boring 
                             lessons into enjoyable experiences, helping to motivate students learning.</p>
                         </div>
-                        <button type="button" class="btn btn-light">Join Us!</button>
+                        <button type="button" class="btn btn-light" onclick="window.location.href='{{ url('/signin') }}'">Join Us!</button>
                     </div>
                 </div>
                 <div class="col-7">

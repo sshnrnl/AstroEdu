@@ -26,24 +26,37 @@
 
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input class="form-control" type="text" placeholder="Email" aria-label="default input" required>
+                    <input id="emailInput" class="form-control" type="email" placeholder="Email" aria-label="default input" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="Password" class="form-label">Password</label>
-                    <input class="form-control" type="password" placeholder="Password" aria-label="default input example" required>
+                    <input id="passwordInput" class="form-control" type="password" placeholder="Password" aria-label="default input example" required>
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Sign In</button><br><br>
+                <button type="button" class="btn btn-dark" onclick="validateAndRedirect()">Sign Up</button>
+
+                <script>
+                function validateAndRedirect() {
+                    const email = document.getElementById('emailInput').value;
+                    const password = document.getElementById('passwordInput').value;
+
+                    if (email && password) {
+                        window.location.href = '{{ url("/learn") }}';
+                    } else {
+                        alert('Please fill in all the fields.');
+                    }
+                }
+                </script>
 
                 <p>Or Sign in With</p>
                 <div class="container_logo">
                     <div class="row row-cols-2">
                       <div class="col">
-                        <button type="button" class="btn btn-outline-dark">Google</button>
+                        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='{{ url('#') }}'">Google</button>
                       </div>
                       <div class="col">
-                        <button type="button" class="btn btn-outline-dark">Facebook</button>
+                        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='{{ url('#') }}'">Facebook</button>
                       </div>
                     </div>
                 </div>
