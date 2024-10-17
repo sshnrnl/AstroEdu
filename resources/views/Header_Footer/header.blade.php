@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
+    <link rel="stylesheet" href="{{ asset('Header_Footer/Header_Footer.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="{{ asset('Login/Astronot.png') }}"
+            src="{{ asset('Header_Footer/Astronot.png') }}"
             alt="Bootstrap"
             width="50"
             height="50"
@@ -34,6 +36,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link text-decoration-none text-light" aria-current="page" href="welcome.blade.php"
                 >Home</a
               >
@@ -49,6 +52,24 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-decoration-none text-light" href="#">Profile</a>
+=======
+              <a class="nav-link text-decoration-none text-dark" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/learn') }}">Learning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-dark" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-dark" href="{{ url('/signin') }}">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-dark" href="#">Profile</a>
+>>>>>>> 665a89ae72cbc876a15f5df04e12f325c50e9d1f
             </li>
           </ul>
         </div>
