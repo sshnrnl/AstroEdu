@@ -36,40 +36,22 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-<<<<<<< HEAD
-              <a class="nav-link text-decoration-none text-light" aria-current="page" href="welcome.blade.php"
-                >Home</a
-              >
+              <a class="nav-link text-decoration-none text-light" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" href="#">Project</a>
+              <a class="nav-link text-decoration-none text-light" href="{{ url('/learn') }}">Learning</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" href="#">Students</a>
+              <a class="nav-link text-decoration-none text-light" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-none text-light" href="{{ url('/') }}">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-decoration-none text-light" href="{{ url('/signin') }}">Sign In</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-decoration-none text-light" href="#">Profile</a>
-=======
-              <a class="nav-link text-decoration-none text-dark" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-dark" href="{{ url('/learn') }}">Learning</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-dark" href="#">Community</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-dark" href="{{ url('/') }}">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-dark" href="{{ url('/signin') }}">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-dark" href="#">Profile</a>
->>>>>>> 665a89ae72cbc876a15f5df04e12f325c50e9d1f
             </li>
           </ul>
         </div>
