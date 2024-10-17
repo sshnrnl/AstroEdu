@@ -44,10 +44,13 @@
 
                 <p>Or Sign up With</p>
                 <div class="container_logo">
-                    <div class="row row-cols-3">
-                      <div class="col"><img src="{{ asset('Login/Instagram Logo.png') }}"></div>
-                      <div class="col"><img src="{{ asset('Login/Google Logo.png') }}"></div>
-                      <div class="col"><img src="{{ asset('Login/Facebook logo.png') }}"></div>
+                    <div class="row row-cols-2">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark">Google</button>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark">Facebook</button>
+                      </div>
                     </div>
                 </div>
 

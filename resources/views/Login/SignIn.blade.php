@@ -26,22 +26,25 @@
 
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input class="form-control" type="text" placeholder="Email" aria-label="default input">
+                    <input class="form-control" type="text" placeholder="Email" aria-label="default input" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="Password" class="form-label">Password</label>
-                    <input class="form-control" type="password" placeholder="Password" aria-label="default input example">
+                    <input class="form-control" type="password" placeholder="Password" aria-label="default input example" required>
                 </div>
 
                 <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Sign In</button><br><br>
 
                 <p>Or Sign in With</p>
                 <div class="container_logo">
-                    <div class="row row-cols-3">
-                      <div class="col"><img src="{{ asset('Login/Instagram Logo.png') }}"></div>
-                      <div class="col"><img src="{{ asset('Login/Google Logo.png') }}"></div>
-                      <div class="col"><img src="{{ asset('Login/Facebook logo.png') }}"></div>
+                    <div class="row row-cols-2">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark">Google</button>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark">Facebook</button>
+                      </div>
                     </div>
                 </div>
 
