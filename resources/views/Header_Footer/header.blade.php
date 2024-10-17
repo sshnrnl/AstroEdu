@@ -34,21 +34,21 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="welcome.blade.php"
+              <a class="nav-link text-decoration-none text-light" aria-current="page" href="welcome.blade.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Project</a>
+              <a class="nav-link text-decoration-none text-light" href="#">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Students</a>
+              <a class="nav-link text-decoration-none text-light" href="#">Students</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/signin') }}">Sign In</a>
+              <a class="nav-link text-decoration-none text-light" href="{{ url('/signin') }}">Sign In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link text-decoration-none text-light" href="#">Profile</a>
             </li>
           </ul>
         </div>

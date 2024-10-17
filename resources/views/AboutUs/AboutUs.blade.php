@@ -129,7 +129,9 @@
     <!-- Card End -->
      
     <!-- Footer Start -->
+
      @include('Header_Footer.footer')
+     
     <!-- Footer End -->
 </body>
 </html>
