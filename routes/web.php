@@ -29,3 +29,7 @@ Route::get('/signin', function () {
 Route::get('/', function () {
     return view('AboutUs.AboutUs');
 });
+
+Route::get('/learn', function () {
+    return view('Learning.Learning');
+});

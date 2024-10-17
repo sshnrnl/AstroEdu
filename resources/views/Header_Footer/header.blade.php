@@ -39,10 +39,13 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Project</a>
+              <a class="nav-link" href="{{ url('/learn') }}">Learning</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Students</a>
+              <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url('/signin') }}">Sign In</a>
