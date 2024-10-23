@@ -11,26 +11,26 @@
     
     <!-- Footer -->
     <footer>
-    <div class="container-fluid d-flex justify-content-around p-5" style="background-color: #c6d6ff">
+    <div class="container-fluid d-flex justify-content-around p-5" style="background-color: #2F387B">
       <div class="d-flex flex-column align-items-center">
         <img class="footer_logo" src="{{ asset('Header_Footer/Astronot.png') }}" alt="">
       </div>
   
       <div class="">
-        <h3 class="text-dark fw-bold">Site map</h3>
+        <h3 class="text-light fw-bold">Site map</h3>
   
         <div class="d-flex m-0 p-0">
           <div class="container d-flex flex-column m-0 p-0">
-            <a href="" class="footer_text text-decoration-none text-dark">Store</a>
-            <a href="" class="footer_text text-decoration-none text-dark">Profile</a>
-            <a href="" class="footer_text text-decoration-none text-dark">Home</a>
+            <a href="" class="footer_text text-decoration-none text-light">Store</a>
+            <a href="" class="footer_text text-decoration-none text-light">Profile</a>
+            <a href="" class="footer_text text-decoration-none text-light">Home</a>
           </div>
         </div>
   
       </div>
   
       <div class="">
-        <h3 class="text-dark fw-bold" style="padding-left: 30px;">Follow kami di:</h3>
+        <h3 class="text-light fw-bold" style="padding-left: 30px;">Follow kami di:</h3>
         <ul class="d-flex gap-4" style="list-style-type: none;">
           <img src="{{ asset('Header_Footer/youtube.png') }}" width="50" height="40" alt="">
           <img src="{{ asset('Header_Footer/x.png') }}" width="70" height="40" alt="">

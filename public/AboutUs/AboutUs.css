@@ -8,19 +8,6 @@
     font-family: sans-serif;
   }
 
-.navbar{
-    background-color: #2f387b;
-    box-sizing: border-box;
-}
-
-.nav-item{
-  /* text-decoration: none; */
-  font-size: larger;
-  margin-right: 80px;
-  padding-bottom: 5px;
-  color: white;
-}
-
 main {
     padding-top: 50px;
     padding-bottom: 125px;
@@ -32,7 +19,7 @@ main {
 }
 
 .TextAboutUs {
-    color: wheat;
+    color: #FFF1D7;
 }
 
 .TextAboutUs p {

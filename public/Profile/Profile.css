@@ -1,0 +1,94 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Set the background image for the body */
+body {
+    background-image: url('Home2.jpg');
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: Change text color to be visible on the background */
+}
+
+/* Style the content */
+.content {
+    background-color: rgba(20, 34, 69, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    width: 1000px; /* Set a fixed width */
+    height: 500px; /* Set a fixed height */
+    overflow: hidden; /* Hide any overflowing content */
+    box-sizing: border-box;
+}
+
+.mb-3{
+    text-align: left;
+}
+
+/* Optional: Additional styling for the elements */
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.profile-card {
+    text-align: center;
+    color: #F5DEB3; /* Light yellow text */
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Circular Profile Image */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Edit Icon */
+.edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #F0C75E;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.edit-icon i {
+    color: #142245;
+    font-size: 12px;
+}
+
+/* Profile Name */
+.profile-name p {
+    margin: 0;
+    font-size: 16px;
+}

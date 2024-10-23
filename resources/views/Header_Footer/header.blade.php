@@ -18,7 +18,7 @@
             height="50"
           />
         </a>
-        <span class="fs-3 fw-semibold">AstroEdu</span>
+        <span class="fs-3 fw-semibold text-light">AstroEdu</span>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,10 +48,7 @@
               <a class="nav-link text-decoration-none text-light" href="{{ url('/') }}">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" href="{{ url('/signin') }}">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" href="#">Profile</a>
+              <a class="nav-link text-decoration-none text-light" href="{{ url('/profil') }}">Profile</a>
             </li>
           </ul>
         </div>
