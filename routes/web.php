@@ -35,6 +35,10 @@ Route::get('/learn', function () {
     return view('Learning.Learning');
 });
 
+Route::get('/profil', function () {
+    return view('Profile.Profile');
+});
+
 Route::get('auth/google', function () {
     return Socialite::driver('google')->redirect();
 });
