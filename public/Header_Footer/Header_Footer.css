@@ -1,6 +1,8 @@
 .navbar{
-    background-color: #2F387B;
+    background-color: #02090E;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
 }
 
 .nav-item{
@@ -10,12 +12,59 @@
   padding-bottom: 10px;
 }
 
-.footer_logo{
-    width: 200px;
-    height: 200px;
-    align-items: start;
+.navbar-toggler {
+    border-color: white;
+}
+.navbar-toggler-icon {
+    background-color: white;
+}
+.nav-link {
+    color: white !important; /* Warna teks menu */
+}
+.btn-warning {
+    color: black !important; /* Warna teks tombol */
+}
+.bi-person-circle {
+    fill: white; /* Warna ikon profil */
+}
+.justify-content-between {
+    justify-content: space-between !important; /* Elemen di kiri, tengah, kanan */
+}
+.navbar-nav {
+    gap: 20px; /* Jarak antar menu */
 }
 
-.footer_text{
-    font-size: x-large;
+footer {
+    background-color: #000; /* Warna latar belakang footer */
+    color: #fff; /* Warna teks */
+    text-align: center; /* Teks di tengah */
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #ccc; /* Warna hover */
+}
+
+footer img {
+    width: 40px; /* Ukuran ikon media sosial */
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.1); /* Animasi hover */
+}
+
+footer .container {
+    max-width: 600px; /* Agar konten terpusat */
+    margin: 0 auto;
 }
