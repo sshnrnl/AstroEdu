@@ -1,174 +1,66 @@
-img{
-    display: block;
-    max-width: 100%;
-    height: auto;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00274D;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('Home2.jpg');
 }
 
-.card__container{
-    display: grid;
-    place-items: center;
-    margin-inline: 1.5rem;
-    padding-block: 5rem;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
-
-.card_container{
-    display: grid;
-    row-gap: 3.5rem;
-    gap: 150px;
+.search-bar {
+    margin: 40px 0;
 }
-
-.card_article{
-    position: relative;
-    overflow: hidden;
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
 }
-
-.card_img{
-   width: 328px;
-   border-radius: 3rem;
-   border: #cdb0de;
-   border-radius: 3rem;
-   /* border-bottom-style: groove;
-   border-top-style: groove;
-   border-width: 10px; */
-   border-style: dashed;
-   border-width: 4px;
+.search-bar button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-.card_data{
-    width: 280px;
-    background-color: white;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-    border-radius: 1rem;
-    position: absolute;
-    bottom: -9rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    opacity: 0;
-    transition: opacity 1s 1s;
+h1 {
+    font-size: 28px;
+    color: blanchedalmond;
 }
-
-.card_desc{
-    display: block;
-    font-size: var(--small-font-size);
-    margin-bottom: .25rem;
+.faq-section {
+    margin-top: 40px;
 }
-
-.card_title{
-    font-size: var(--h2-font-size);
-    font-weight: 500;
-    color: black;
-    margin-bottom: .75rem;
+.faq-section h2 {
+    color: blanchedalmond;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-
-.card_button{
-    text-decoration: none;
-    font-size: var(--small-font-size);
-    font-weight: 500;
-    color: #7e91c0;
+.faq-item {
+    background-color: #fff;
+    color: #00274D;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.card_button:hover{
-    text-decoration: underline;
-    color: #7e91c0;
+.faq-item:hover {
+    background-color: navy;
+    color: #00274D;
 }
-
-.card_article:hover .card_data{
-    animation: show-data 1s forwards;
-    opacity: 1;
-    transition: opacity .3s ;
+.faq-item h3 {
+    margin: 0;
 }
-
-.card_article:hover{
-    animation: remove-overflow 2s forwards;
-}
-
-.card_article:not(:hover){
-    animation: show-overflow 2s forwards;
-}
-
-.card_article:not(:hover) .card_data{
-    animation: remove-data 2s forwards;
-}
-
-
-@keyframes show-data{
-    50%{
-        transform: translateY(-10rem);
-    }
-    100%{
-        transform: translateY(-7rem);
-    }
-}
-
-@keyframes remove-overflow{
-    to{
-        overflow: initial;
-
-    }
-}
-
-@keyframes remove-data{
-    0%{
-        transform: translateY(-7rem);
-    }
-    50%{
-        transform: translateY(-10rem);
-    }
-    100%{
-        transform: translateY(.5rem);
-    }
-}
-
-@keyframes show-overflow{
-    0%{
-        overflow: initial;
-        pointer-events: none;
-    }
-    50%{
-        overflow: hidden;
-
-    }
-}
-
-@media screen and (max-width: 340px){
-    .card__container{
-        margin-inline: 1rem;
-    }
-
-    .card_data{
-        width: 250px;
-        padding: 1rem;
-    }
-}
-
-@media screen and (min-width: 768px){
-    .card__container{
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5rem;
-
-    }
-}
-
-@media screen and (min-width: 1120px){
-    .card__container{
-        height: 100vh;
-        display: flex;
-        padding: 200px;
-    }
-
-    .card_container{
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    .card_img{
-        width: 348px;
-        height: 100%;
-    }
-
-    .card_data{
-        width: 316px;
-        padding-inline: 2.5rem;
-    }
+.faq-item .icon {
+    font-size: 20px;
+    cursor: pointer;
 }

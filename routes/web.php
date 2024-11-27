@@ -14,8 +14,8 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/homw', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('Home.Home');
 });
 
 Route::get('/signup', function () {
@@ -28,7 +28,7 @@ Route::get('/signin', function () {
 });
 
 Route::get('/', function () {
-    return view('AboutUs.AboutUs');
+    return view('Home.Home');
 });
 
 Route::get('/learn', function () {

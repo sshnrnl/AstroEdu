@@ -1,4 +1,4 @@
-/* /* img{
+/* img{
     display: block;
     max-width: 100%;
     height: auto;
@@ -27,11 +27,11 @@
    border-radius: 3rem;
    border: #cdb0de;
    border-radius: 3rem;
-   /* border-bottom-style: groove;
+   border-bottom-style: groove;
    border-top-style: groove;
    border-width: 10px; 
    border-style: dashed;
-   border-width: 4px;
+   border-width: 4px; 
 }
 
 .card_data{
@@ -171,5 +171,5 @@
         width: 316px;
         padding-inline: 2.5rem;
     }
-} */
-
+} 
+ */ 
