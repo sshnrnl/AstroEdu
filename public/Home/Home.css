@@ -262,3 +262,73 @@ img{
     color: white;
     font-size: 20px;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00274D;
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+}
+.hero-section .content {
+    max-width: 600px;
+    text-align: left;
+}
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: blanchedalmond;
+    margin: 0;
+}
+.hero-section p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.hero-section .btn {
+    background-color: blanchedalmond;
+    color: #00274D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero-section .btn:hover {
+    background-color: rgb(244, 169, 57);
+}
+.hero-section .astronaut {
+    max-width: 400px;
+}
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #00274D;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.info-section .info-box {
+    text-align: center;
+}
+.info-section .info-box h3 {
+    margin: 0;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.info-section .info-box p {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    height: 50;
+}

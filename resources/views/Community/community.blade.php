@@ -13,44 +13,47 @@
     @include('Header_Footer.header')
     <!-- Navbar End -->
 
-    <!-- Card Start -->
-     <div class="card__container">
-        <div class="card_container">
-          <article class="card_article">
-            <img src="{{ asset('Login/Card1.png') }}" alt="image" class="card_img">
-
-            <div class="card_data">
-              <span class="card_desc">Games</span>
-                <h2 class="card_title">Astronot Satu</h2>
-                <a href="#" class="card_button">Read More</a>
-            </div>
-
-          </article>
-          <article class="card_article">
-            <img src="{{ asset('Login/Card2.png') }}" alt="image" class="card_img">
-
-            <div class="card_data">
-              <span class="card_desc">Project</span>
-                <h2 class="card_title">Astronot Dua</h2>
-                <a href="#" class="card_button">Read More</a>
-            </div>
-
-          </article>
-          <article class="card_article">
-            <img src="{{ asset('Login/Card3.png') }}" alt="image" class="card_img">
-
-            <div class="card_data">
-              <span class="card_desc">Students</span>
-                <h2 class="card_title">Astronot Tiga</h2>
-                <a href="#" class="card_button">Read More</a>
-            </div>
-
-          </article>
-          
-
+    <!-- Main Start -->
+    <div class="container">
+        <!-- Search Bar -->
+        <h1>Hello, How Can We Help You?</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for answers" />
+            <button>Search</button>
         </div>
-     </div>
-    <!-- Card End -->
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently asked questions</h2>
+            
+            <!-- FAQ Items -->
+            <div class="faq-item">
+                <h3>Who is AstroEdu for?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+            <div class="faq-item">
+                <h3>Do I need to create an account to use AstroEdu?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+            <div class="faq-item">
+                <h3>Is AstroEdu free?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+            <div class="faq-item">
+                <h3>Can parents or teachers monitor students' progress?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use AstroEdu offline?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+            <div class="faq-item">
+                <h3>How can I contact customer support?</h3>
+                <span class="icon">&#x25BC;</span>
+            </div>
+        </div>
+    </div>
+    <!-- Main End -->
      
     <!-- Footer Start -->
      @include('Header_Footer.footer')

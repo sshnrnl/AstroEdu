@@ -14,8 +14,8 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/homw', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('Home.Home');
 });
 
 Route::get('/signup', function () {

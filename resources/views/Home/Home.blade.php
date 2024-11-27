@@ -15,6 +15,43 @@
 
   <!-- Main Start -->
 
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="content">
+            <h1>Learning Should be Fun</h1>
+            <p>Play, Learn, and Grow: Unlock Your Child's Love for Learning!</p>
+            <a href="#" class="btn">Join Course</a>
+        </div>
+        <!-- Astronaut Image -->
+        <div>
+            <img src="{{ asset('Home/rafiki.png') }}" alt="Astronaut" class="astronaut">
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <div class="info-box">
+            <h3>Education</h3>
+            <p>Elementary</p>
+        </div>
+        <div class="info-box">
+            <h3>6+</h3>
+            <p>Subjects</p>
+        </div>
+        <div class="info-box">
+            <h3>50++</h3>
+            <p>Materials made by<br> Specialist</p>
+        </div>
+        <div class="info-box">
+            <h3>Accreditation</h3>
+            <p>A</p>
+        </div>
+    </div>
+</div>
+
+
+
   <main>
         <div class="container">
             <div class="row">
