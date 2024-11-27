@@ -21,20 +21,55 @@
               <div class="col-7">
                 <h2>Login</h2>
                 <p>
-                    Don't have account? <a href="{{ url('/signup') }}">Sign Up</a>
+                    Don't have account? <a href="{{ route('signup') }}">Sign Up</a>
                 </p>
 
-                <div class="mb-3">
-                    <label for="Email" class="form-label">Email</label>
-                    <input id="emailInput" class="form-control" type="email" placeholder="Email" aria-label="default input" required>
-                </div>
+                @if(session('success'))
+                    <p>{{ session('success') }}</p>
+                @endif
 
-                <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input id="passwordInput" class="form-control" type="password" placeholder="Password" aria-label="default input example" required>
-                </div>
+                <form method="POST" action="{{ route('signin') }}">
+                    @csrf
+                    <!-- <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    @error('email') <p>{{ $message }}</p> @enderror
 
-                <button type="button" class="btn btn-dark" onclick="validateAndRedirect()">Sign Up</button>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    @error('password') <p>{{ $message }}</p> @enderror -->
+
+                    <div class="mb-3">
+                      <label for="emailInput" class="form-label">Email</label>
+                      <input 
+                          type="email" 
+                          name="email" 
+                          id="emailInput" 
+                          class="form-control" 
+                          placeholder="Email" 
+                          aria-label="Email" 
+                          required>
+                      @error('email')
+                          <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="passwordInput" class="form-label">Password</label>
+                      <input 
+                          type="password" 
+                          name="password" 
+                          id="passwordInput" 
+                          class="form-control" 
+                          placeholder="Password" 
+                          aria-label="Password" 
+                          required>
+                      @error('password')
+                          <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                  </div>
+
+                    <button type="submit" class="btn btn-primary">Signin</button>
+                </form>
 
                 <script>
                 function validateAndRedirect() {

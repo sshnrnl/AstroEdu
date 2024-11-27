@@ -46,7 +46,7 @@
               <a class="nav-link text-decoration-none text-light" href="{{ url('/learn') }}">Learning</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" href="{{ url('/community') }}">Community</a>
+                <a class="nav-link text-decoration-none text-light" href="{{ route('faq.search') }}">FAQ</a>
             </li>
           </ul>
 

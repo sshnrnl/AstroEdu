@@ -13,6 +13,10 @@ return [
     |
     */
 
+    'redirects' => [
+        'login' => '/signin', // Ubah default login ke '/signin'
+    ],
+
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',

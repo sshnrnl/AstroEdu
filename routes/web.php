@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FaqController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,25 +21,12 @@ Route::get('/home', function () {
     return view('Home.Home');
 });
 
-Route::get('/signup', function () {
-    return view('Login.SignUp');
-});
-
-
-Route::get('/signin', function () {
-    return view('Login.SignIn');
-});
-
 Route::get('/', function () {
     return view('Home.Home');
 });
 
 Route::get('/learn', function () {
     return view('Learning.Learning');
-});
-
-Route::get('/profil', function () {
-    return view('Profile.Profile');
 });
 
 Route::get('auth/google', function () {
@@ -54,3 +44,25 @@ Route::get('auth/facebook', function () {
 Route::get('auth/facebook/callback', function () {
     $user = Socialite::driver('facebook')->user();
 });
+
+Route::get('/signup', [ProfileController::class, 'showSignupForm'])->name('signup');
+Route::post('/signup', [ProfileController::class, 'signup']);
+
+Route::get('/signin', [ProfileController::class, 'showSigninForm'])->name('signin');
+Route::post('/signin', [ProfileController::class, 'signin']);
+Route::post('/signout', [ProfileController::class, 'signout'])->name('signout');
+
+// Rute untuk menampilkan halaman profile
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+
+// Rute untuk halaman edit profile
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit'); // URL untuk halaman edit profil
+    Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update'); // POST untuk update
+});
+
+// Route buat FAQ
+Route::get('/faq/search', [FaqController::class, 'search'])->name('faq.search');

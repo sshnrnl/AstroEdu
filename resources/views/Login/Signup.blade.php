@@ -21,27 +21,87 @@
               <div class="col-7">
                 <h2>Get Sarted</h2>
                 <p>
-                    Already have account? <a href="{{ url('/signin') }}">Sign In</a>
+                    Already have account? <a href="{{ route('signin') }}">Sign In</a>
                 </p>
                 
+                @if(session('success'))
+                    <p>{{ session('success') }}</p>
+                @endif
+                
 
-                <div class="mb-3">
-                    <label for="Name" class="form-label">Name</label>
-                    <input id="nameInput" class="form-control" type="text" placeholder="Name" aria-label="default input" required>
-                </div>
+                <form method="POST" action="{{ route('signup') }}">
+                    @csrf
+                    <!-- <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                    @error('name') <p>{{ $message }}</p> @enderror
 
-                <div class="mb-3">
-                    <label for="Email" class="form-label">Email</label>
-                    <input id="emailInput" class="form-control" type="email" placeholder="Email" aria-label="default input" required>
-                </div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    @error('email') <p>{{ $message }}</p> @enderror
 
-                <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input id="passwordInput" class="form-control" type="password" placeholder="Password" aria-label="default input example" required>
-                </div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                    @error('password') <p>{{ $message }}</p> @enderror
 
-                <button type="button" class="btn btn-dark" onclick="validateAndRedirect()">Sign Up</button>
+                    <label for="password_confirmation">Confirm Password:</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation" required> -->
 
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Name</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="nameInput" 
+                            class="form-control" 
+                            placeholder="Name" 
+                            required>
+                        @error('name')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="emailInput" 
+                            class="form-control" 
+                            placeholder="Email" 
+                            required>
+                        @error('email')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="passwordInput" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            id="passwordInput" 
+                            class="form-control" 
+                            placeholder="Password" 
+                            required>
+                        @error('password')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="passwordConfirmationInput" class="form-label">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            name="password_confirmation" 
+                            id="passwordConfirmationInput" 
+                            class="form-control" 
+                            placeholder="Confirm Password" 
+                            required>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark">Signup</button>
+                </form>
+                
                 <script>
                 function validateAndRedirect() {
                     const text = document.getElementById('nameInput').value;
