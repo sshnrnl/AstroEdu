@@ -52,34 +52,7 @@
 
 
 
-  <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-5">
-                    <div class="TextAboutUs">
-                        <h1>About Us</h1>
-                        <div class="Description">
-                            <p>AstroEdu offers engaging educational resources designed to enhance 
-                            learning experiences for elementary school students. We provide a variety of subject-specific 
-                            questions accompanied by captivating features and appealing designs. Our goal is to change boring 
-                            lessons into enjoyable experiences, helping to motivate students learning.</p>
-                        </div>
-                        <button type="button" class="btn btn-light" onclick="window.location.href='{{ url('/signin') }}'">Join Us!</button>
-                    </div>
-                </div>
-                <div class="col-7">
-                    <div class="Vid">
-                        <video autoplay muted controls loop>
-                            <source src="{{ asset('AboutUs/Vid.mp4') }}" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-    <div class="cardTitle_container">
+<div class="cardTitle_container">
         <h1 class="card_titles">Browse Courses</h1>
     </div>
     
@@ -124,7 +97,59 @@
 
         </div>
     </div>
+
+
+
+  <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="TextAboutUs">
+                        <h1>About Us</h1>
+                        <div class="Description">
+                            <p>AstroEdu offers engaging educational resources designed to enhance 
+                            learning experiences for elementary school students. We provide a variety of subject-specific 
+                            questions accompanied by captivating features and appealing designs. Our goal is to change boring 
+                            lessons into enjoyable experiences, helping to motivate students learning.</p>
+                        </div>
+                        <button type="button" class="btn btn-light" onclick="window.location.href='{{ url('/signin') }}'">Join Us!</button>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="Vid">
+                        <video autoplay muted controls loop>
+                            <source src="{{ asset('AboutUs/Vid.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
     
+
+    <!-- Rating start -->
+    
+    <body>
+    <div class="reviews-container">
+        <!-- Repeatable Review Card -->
+        @for ($i = 0; $i < 3; $i++)
+        <div class="review-card">
+            <img src="https://via.placeholder.com/50" alt="User">
+            <div class="name">Aliyyah</div>
+            <div class="stars">⭐⭐⭐⭐☆ 4/5</div>
+            <div class="review-text">
+                With this website, my children finally can study without having to use Y**tube as entertainment.
+            </div>
+        </div>
+        @endfor
+    </div>
+</body>
+
+    <!-- Rating end -->
+
+
     <!-- Main End -->
      
     <!-- Footer Start -->

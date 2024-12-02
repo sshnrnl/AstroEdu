@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.header {
+    /* background-color: #002f5f; */
+    color: #ffd700;
+    text-align: center;
+    padding: 20px;
+}
+.content {
+    padding: 20px;
+}
+
+.video-placeholder{
+    width: 100%; /* Make sure the video container takes up 100% of the column */
+    padding-left: 20px;
+}
+
+.video-placeholder video {
+    width: 100%; /* Make video responsive to its container */
+    max-width: 100%; /* Prevents video from exceeding container width */
+    height: auto; /* Adjusts height automatically to preserve aspect ratio */
+    max-height: 400px;
+    cursor: pointer;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.about-section, .learning-section, .instructor-section {
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.learning-section{
+    /* border: 1px solid black;
+    width: 100%;
+     */
+
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instructor {
+    display: flex;
+    align-items: center;
+}
+
+.instructor img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.instructor-details {
+    font-size: 16px;
+}
+
+.instructor-details h3 {
+    margin: 0;
+    font-size: 18px;
+}

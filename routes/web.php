@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/learn', function () {
-    return view('Learning.Learning');
+    return view('Course.Course');
 });
 
 Route::get('auth/google', function () {
