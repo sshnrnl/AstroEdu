@@ -105,7 +105,7 @@
             <div class="row">
                 <div class="col-5">
                     <div class="TextAboutUs">
-                        <h1>About Us</h1>
+                        <h1 class="vid-title">About Us</h1>
                         <div class="Description">
                             <p>AstroEdu offers engaging educational resources designed to enhance 
                             learning experiences for elementary school students. We provide a variety of subject-specific 
