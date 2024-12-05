@@ -40,7 +40,7 @@
         >
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link text-decoration-none text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-decoration-none text-light" aria-current="page" href="{{ url('/') }}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-decoration-none text-light" href="{{ url('/learn') }}">Learning</a>

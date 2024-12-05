@@ -21,7 +21,7 @@
         <div class="content">
             <h1>Learning Should be Fun</h1>
             <p>Play, Learn, and Grow: Unlock Your Child's Love for Learning!</p>
-            <a href="#" class="btn">Join Course</a>
+            <a href="{{ url('/learn') }}" class="btn">Join Course</a>
         </div>
         <!-- Astronaut Image -->
         <div>
@@ -52,13 +52,13 @@
 
 
 
-<div class="cardTitle_container">
+    <div class="cardTitle_container">
         <h1 class="card_titles">Browse Courses</h1>
     </div>
     
     <div class="cardDesc_container">
-        <span class="card_descs">Below are previews of the courses available on our platform. Each course is thoughtfully designed to help<br> you acquire new skills, 
-        delve into exciting topics, and achieve your personal and professional goals</span>
+        <p class="text-center">Below are previews of the courses available on our platform. Each course is thoughtfully designed to help<br> you acquire new skills, 
+        delve into exciting topics, and achieve your personal and professional goals</p>
     </div>
 
     <div class="card__container">
@@ -67,9 +67,9 @@
             <img src="{{ asset('Login/Card1.png') }}" alt="image" class="card_img">
 
             <div class="card_data">
-              <span class="card_desc">Games</span>
-                <h2 class="card_title">Astronot Satu</h2>
-                <a href="#" class="card_button">Read More</a>
+              <span class="card_desc">Course</span>
+                <h2 class="card_title">Science</h2>
+                <a href="{{ route('courses.index', ['category' => 'Science']) }}" class="card_button">Read More</a>
             </div>
 
           </article>
@@ -77,9 +77,9 @@
             <img src="{{ asset('Login/Card2.png') }}" alt="image" class="card_img">
 
             <div class="card_data">
-              <span class="card_desc">Project</span>
-                <h2 class="card_title">Astronot Dua</h2>
-                <a href="#" class="card_button">Read More</a>
+              <span class="card_desc">Course</span>
+                <h2 class="card_title">Math</h2>
+                <a href="{{ route('courses.index', ['category' => 'Math']) }}" class="card_button">Read More</a>
             </div>
 
           </article>
@@ -87,9 +87,9 @@
             <img src="{{ asset('Login/Card3.png') }}" alt="image" class="card_img">
 
             <div class="card_data">
-              <span class="card_desc">Students</span>
-                <h2 class="card_title">Astronot Tiga</h2>
-                <a href="#" class="card_button">Read More</a>
+              <span class="card_desc">Course</span>
+                <h2 class="card_title">English</h2>
+                <a href="{{ route('courses.index', ['category' => 'English']) }}" class="card_button">Read More</a>
             </div>
 
           </article>
@@ -106,13 +106,11 @@
                 <div class="col-5">
                     <div class="TextAboutUs">
                         <h1 class="vid-title">About Us</h1>
-                        <div class="Description">
-                            <p>AstroEdu offers engaging educational resources designed to enhance 
-                            learning experiences for elementary school students. We provide a variety of subject-specific 
-                            questions accompanied by captivating features and appealing designs. Our goal is to change boring 
-                            lessons into enjoyable experiences, helping to motivate students learning.</p>
-                        </div>
-                        <button type="button" class="btn btn-light" onclick="window.location.href='{{ url('/signin') }}'">Join Us!</button>
+                        <p class="Description">AstroEdu offers engaging educational resources designed to enhance 
+                        learning experiences for elementary school students. We provide a variety of subject-specific 
+                        questions accompanied by captivating features and appealing designs. Our goal is to change boring 
+                        lessons into enjoyable experiences, helping to motivate students learning.</p>
+                        <button type="button" class="btn btn-light btn-left" onclick="window.location.href='{{ url('/signin') }}'">Join Us!</button>
                     </div>
                 </div>
                 <div class="col-7">

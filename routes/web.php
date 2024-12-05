@@ -5,6 +5,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,16 +18,8 @@ use App\Http\Controllers\FaqController;
 |
 */
 
-Route::get('/home', function () {
-    return view('Home.Home');
-});
-
 Route::get('/', function () {
     return view('Home.Home');
-});
-
-Route::get('/learn', function () {
-    return view('Course.Course');
 });
 
 Route::get('auth/google', function () {
@@ -66,3 +59,7 @@ Route::middleware('auth')->group(function () {
 
 // Route buat FAQ
 Route::get('/faq/search', [FaqController::class, 'search'])->name('faq.search');
+
+// Course
+Route::get('/learn', [CourseController::class, 'index'])->name('courses.index');
+Route::get('/learn/{id}', [CourseController::class, 'show'])->name('courses.show');

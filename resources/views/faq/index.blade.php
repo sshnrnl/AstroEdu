@@ -9,13 +9,13 @@
         <div class="search-bar d-flex justify-content-center align-items-center">
             <form action="{{ route('faq.search') }}" method="GET" class="d-flex w-100 justify-content-center">
                 <!-- Input pencarian dengan lebar yang lebih besar -->
-                <input type="text" name="query" placeholder="Search for answers" value="{{ request()->query('query') }}" required class="form-control mr-2">
+                <input type="text" name="query" placeholder="Search for answers" value="{{ request()->query('query') }}" required class="form-control mr-2 me-2">
 
                 <!-- Tombol Search -->
-                <button type="submit" class="btn btn-outline-dark">Search</button>
+                <button type="submit" class="btn btn-outline-dark me-2">Search</button>
 
                 <!-- Tombol Clear Search -->
-                <a href="{{ route('faq.search') }}" class="btn btn-outline-danger ml-2 d-flex align-items-center">Clear Search</a>
+                <a href="{{ route('faq.search') }}" class="btn btn-outline-danger ml-2 d-flex align-items-center me-2">Clear Search</a>
             </form>
         </div><br>
 

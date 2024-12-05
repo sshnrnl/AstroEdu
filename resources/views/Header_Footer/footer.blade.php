@@ -22,9 +22,9 @@
             
             <!-- Navigation Links -->
             <div class="mb-2">
-                <a href="#" class="text-decoration-none text-light mx-3">Home</a>
+                <a href="{{ url('/') }}" class="text-decoration-none text-light mx-3">Home</a>
                 <a href="{{ url('/learn') }}" class="text-decoration-none text-light mx-3">Learning</a>
-                <a href="{{ url('/community') }}" class="text-decoration-none text-light mx-3">Community</a>
+                <a href="{{ route('faq.search') }}" class="text-decoration-none text-light mx-3">FAQ</a>
             </div>
         </div>
   </footer>
