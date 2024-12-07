@@ -19,7 +19,7 @@ use App\Http\Controllers\CourseController;
 */
 
 Route::get('/', function () {
-    return view('Home.Home');
+    return view('Quiz.Quiz');
 });
 
 Route::get('auth/google', function () {
