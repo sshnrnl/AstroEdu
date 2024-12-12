@@ -50,7 +50,7 @@
 
     <div class="container">
         <div class="header">
-            <a href="#">Language / Unit 1: lorem loreman</a>
+            <a href="#" class="">Language / Unit 1: lorem loreman</a>
             <span></span>
         </div>
         <div class="progress-bar">
@@ -72,21 +72,6 @@
                 <li>Lorem ipsum dolor</li>
                 <li>Lorem ipsum dolor</li>
                 <li>
-                        <input type="radio" name="answer" id="option1" value="1" required>
-                        <label for="option1">Lorem ipsum dolor</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="option2" value="2">
-                        <label for="option2">Lorem ipsum dolor</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="option3" value="3">
-                        <label for="option3">Lorem ipsum dolor</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="option4" value="4">
-                        <label for="option4">Lorem ipsum dolor</label>
-                    </li>
             </ul>
             <a href="#" class="next-button">Next question →</a>
         </div>
