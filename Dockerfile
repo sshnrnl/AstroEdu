@@ -1,6 +1,7 @@
 # Gunakan image PHP dengan Nginx
 FROM php:8.0-fpm
 
+
 # Install ekstensi yang dibutuhkan untuk Laravel, seperti ekstensi MySQL dan lainnya
 RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev zip git libmysqlclient-dev && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
