@@ -16,7 +16,6 @@ services:
     image: nginx:latest
     volumes:
       - ./app:/var/www/html
-      - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
     networks:

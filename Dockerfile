@@ -34,11 +34,5 @@ EXPOSE 80
 # Jalankan PHP-FPM untuk server backend
 CMD ["php-fpm", "-F"]
 
-# Install Nginx
-RUN apt-get install -y nginx
-
-# Salin file konfigurasi Nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
-
 # Jalankan Nginx dan PHP-FPM secara bersamaan
 CMD service nginx start && php-fpm
