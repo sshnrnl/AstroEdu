@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./app:/var/www/html
+        - ./public:/var/www/html
     networks:
       - laravel
     depends_on:
@@ -14,9 +14,9 @@ services:
 
   web:
     volumes:
-      - ./app:/var/www/html
+        - ./public:/var/www/html
     ports:
-      - 80:80
+        - "8000:8000"
     networks:
       - laravel
     depends_on:
