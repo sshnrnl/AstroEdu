@@ -33,6 +33,3 @@ EXPOSE 80
 
 # Jalankan PHP-FPM untuk server backend
 CMD ["php-fpm", "-F"]
-
-# Jalankan Nginx dan PHP-FPM secara bersamaan
-CMD service nginx start && php-fpm

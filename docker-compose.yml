@@ -13,7 +13,6 @@ services:
       - db
 
   web:
-    image: nginx:latest
     volumes:
       - ./app:/var/www/html
     ports:
