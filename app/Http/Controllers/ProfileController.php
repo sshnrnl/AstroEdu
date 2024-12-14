@@ -90,7 +90,7 @@ class ProfileController extends Controller
     {
         // Pastikan user sudah login
         if (!Auth::check()) {
-            return redirect()->route('login');
+            return redirect()->route('signin');
         }
 
         // Ambil data user yang sedang login

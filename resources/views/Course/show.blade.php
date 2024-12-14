@@ -30,6 +30,12 @@
         </ul>
     </div>
 
+    <!-- Quiz Button Section -->
+    <form action="{{ route('quiz.show', 2) }}" method="GET">
+        <button type="submit" class="btn btn-outline-secondary mb-3">Start Quiz</button>
+    </form>
+
+
     <!-- Instructor Section -->
     <div class="instructor-section d-flex align-items-center">
         <img src="{{ asset($course->instructor_image) }}" alt="{{ $course->instructor_name }}" class="instructor-image me-4">

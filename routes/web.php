@@ -6,6 +6,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\CourseController;
 */
 
 Route::get('/', function () {
-    return view('Quiz.Quiz');
+    return view('Home.Home');
 });
 
 Route::get('auth/google', function () {
@@ -63,3 +64,17 @@ Route::get('/faq/search', [FaqController::class, 'search'])->name('faq.search');
 // Course
 Route::get('/learn', [CourseController::class, 'index'])->name('courses.index');
 Route::get('/learn/{id}', [CourseController::class, 'show'])->name('courses.show');
+
+// Quiz
+Route::get('/quizzes', [QuizController::class, 'index'])->name('quiz.index');
+// Route::get('/quiz/{quizId}', [QuizController::class, 'show'])->name('quiz.show');
+// Route::post('/quiz/{quizId}/validate', [QuizController::class, 'validateAnswer'])->name('quiz.validate');
+
+// Route::get('/quiz/{quizId}', [QuizController::class, 'showQuiz'])->name('quiz.show');
+// Route::post('/quiz/{quizId}/submit', [QuizController::class, 'validateAnswer'])->name('quiz.submit');
+
+Route::get('/quiz/{quizId}', [QuizController::class, 'showQuiz'])->name('quiz.show');
+Route::post('/quiz/{quizId}/submit', [QuizController::class, 'submitAnswer'])->name('quiz.submit');
+Route::get('/quiz/{quizId}/result', [QuizController::class, 'showResult'])->name('quiz.result');
+
+
