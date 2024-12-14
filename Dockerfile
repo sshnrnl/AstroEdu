@@ -15,20 +15,30 @@ RUN apt-get update && apt-get install -y \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Set direktori kerja di dalam kontainer
-WORKDIR /var/www
+# Set working directory ke lokasi aplikasi Laravel
+WORKDIR /var/www/html
 
-# Salin file aplikasi Laravel ke dalam kontainer
-COPY . .
+# Salin seluruh source code aplikasi ke direktori kerja
+COPY . /var/www/html
 
-# Install dependensi PHP Laravel (dengan Composer)
+# Jalankan composer untuk menginstal dependency
 RUN composer install --no-dev --optimize-autoloader
 
-# Pastikan file storage dan cache Laravel bisa ditulis
-RUN chmod -R 775 storage bootstrap/cache
+# Berikan izin pada folder storage dan bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html
 
 # Expose port yang digunakan oleh aplikasi
 EXPOSE 80
 
 # Jalankan PHP-FPM untuk server backend
 CMD ["php-fpm", "-F"]
+
+# Install Nginx
+RUN apt-get install -y nginx
+
+# Salin file konfigurasi Nginx
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+# Jalankan Nginx dan PHP-FPM secara bersamaan
+CMD service nginx start && php-fpm
