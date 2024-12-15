@@ -1,5 +1,5 @@
 # Gunakan image PHP dengan Nginx
-FROM php:8.0-fpm
+FROM php:8.3-fpm
 
 # Install ekstensi yang dibutuhkan untuk Laravel
 RUN apt-get update && apt-get install -y \
