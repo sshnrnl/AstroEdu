@@ -1,7 +1,7 @@
-# Gunakan image PHP dengan Nginx
+# Use the PHP 8.3 image
 FROM php:8.3-fpm
 
-# Install ekstensi yang dibutuhkan untuk Laravel
+# Install dependencies and extensions for Laravel
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
@@ -10,27 +10,24 @@ RUN apt-get update && apt-get install -y \
     git \
     libmariadb-dev-compat \
     libzip-dev \
+    libxml2-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql zip
+    && docker-php-ext-install gd pdo pdo_mysql zip bcmath mbstring
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Set working directory ke lokasi aplikasi Laravel
+# Set the working directory inside the container
 WORKDIR /var/www/html
 
-# Salin seluruh source code aplikasi ke direktori kerja
+# Copy application files to the working directory
 COPY . /var/www/html
 
-# Bersihkan cache Composer dan install dependency
-RUN composer clear-cache && composer install --no-dev --optimize-autoloader
+# Install dependencies via Composer
+RUN composer install --no-dev --optimize-autoloader
 
-# Berikan izin pada folder storage dan bootstrap/cache
-RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-RUN chown -R www-data:www-data /var/www/html
+# Expose the port for the Laravel development server
+EXPOSE 8000
 
-# Expose port yang digunakan oleh aplikasi
-EXPOSE 80
-
-# Jalankan PHP-FPM
-CMD ["php-fpm", "-F"]
+# Run the Laravel development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
