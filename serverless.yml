@@ -1,0 +1,16 @@
+service: laravel
+
+provider:
+    name: aws
+    region: us-east-1
+    runtime: provided.al2 # PHP runtime for AWS Lambda
+
+functions:
+    web:
+        handler: public/index.php
+        timeout: 30 # Adjust if needed
+        events:
+            - httpApi: '*'
+
+plugins:
+    - ./vendor/bref/bref
