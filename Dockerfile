@@ -1,7 +1,7 @@
 # Gunakan image PHP dengan Nginx
 FROM php:8.0-fpm
 
-# Install ekstensi yang dibutuhkan untuk Laravel, seperti ekstensi MySQL dan lainnya
+# Install ekstensi yang dibutuhkan untuk Laravel
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
@@ -20,7 +20,6 @@ WORKDIR /var/www/html
 
 # Salin seluruh source code aplikasi ke direktori kerja
 COPY . /var/www/html
-WORKDIR /var/www/html/public
 
 # Jalankan composer untuk menginstal dependency
 RUN composer install --no-dev --optimize-autoloader
@@ -35,4 +34,5 @@ EXPOSE 80
 # Jalankan PHP-FPM untuk server backend
 CMD ["php-fpm", "-F"]
 
+# Bersihkan cache Laravel
 RUN php artisan route:clear && php artisan config:clear && php artisan cache:clear && php artisan view:clear
