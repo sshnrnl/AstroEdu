@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     git \
     libmariadb-dev-compat \
     libzip-dev \
-    nginx \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql zip
 
@@ -33,8 +32,5 @@ RUN chown -R www-data:www-data /var/www/html
 # Expose port yang digunakan oleh aplikasi
 EXPOSE 80
 
-# Salin konfigurasi Nginx ke container
-COPY nginx/default.conf /etc/nginx/sites-available/default
-
-# Jalankan PHP-FPM dan Nginx
-CMD service nginx start && php-fpm -F
+# Jalankan PHP-FPM
+CMD ["php-fpm", "-F"]
