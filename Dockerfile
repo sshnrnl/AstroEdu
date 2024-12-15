@@ -20,6 +20,7 @@ WORKDIR /var/www/html
 
 # Salin seluruh source code aplikasi ke direktori kerja
 COPY . /var/www/html
+WORKDIR /var/www/html/public
 
 # Jalankan composer untuk menginstal dependency
 RUN composer install --no-dev --optimize-autoloader
@@ -33,3 +34,5 @@ EXPOSE 80
 
 # Jalankan PHP-FPM untuk server backend
 CMD ["php-fpm", "-F"]
+
+RUN php artisan route:clear && php artisan config:clear && php artisan cache:clear && php artisan view:clear
